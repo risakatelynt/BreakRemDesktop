@@ -1,0 +1,22 @@
+<div class="gradient-bg px-4 py-4" *ngIf="!loading">
+    <a class="go-back-link d-flex align-items-center" (click)="goBack()">
+        <div class="icons back-icon me-2"></div>Go back
+    </a>
+    <div class="row justify-content-center">
+        <div *ngFor="let animation of animations"
+            class="col-3 animation-content mx-3 my-3 px-3 py-3 d-flex flex-column align-items-center">
+            <h6 class="mb-3">{{ animation['name'] }}</h6>
+            <img [src]="animation['url']" alt="{{ animation['name'] }}" class="img-size">
+            <div class="row">
+                <div class="col-12 pt-4">
+                    <div class="button-wrap">
+                        <div class="button-bg"></div>
+                        <button type="submit" (click)="addAnimation(animation)">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-inner-spinner *ngIf="loading"></app-inner-spinner>

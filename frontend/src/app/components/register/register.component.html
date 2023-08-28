@@ -1,0 +1,53 @@
+<div class="gradient-bg d-flex justify-content-center align-items-center">
+  <div class="container d-flex justify-content-center margin-container">
+    <div class="signup-content">
+      <h2 class="d-flex justify-content-center mt-4">Sign up</h2>
+      <div class="d-flex flex-column flex-sm-row">
+        <div class="signup-form col-12 col-sm-7 col-md-5 ps-5 pe-4 pt-4">
+          <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+            <div class="posn-relative">
+              <div class="form-group" [ngClass]="{'error-border': isInvalid(signUpForm.controls['username'])}">
+                <label for="name" class="icons profile-icon"></label>
+                <input type="text" formControlName="username" placeholder="Username" />
+                <span class="input-focus"></span>
+              </div>
+              <div *ngIf="isInvalid(signUpForm.controls['username'])" class="error-message">
+                Please enter username
+              </div>
+            </div>
+            <div class="posn-relative">
+              <div class="form-group" [ngClass]="{'error-border': isInvalid(signUpForm.controls['email'])}">
+                <label for="email" class="icons email-icon"></label>
+                <input type="email" formControlName="email" placeholder="Your Email" />
+                <span class="input-focus"></span>
+              </div>
+              <div *ngIf="isInvalid(signUpForm.controls['email'])" class="error-message">
+                {{ getEmailErrorMessage(signUpForm.controls['email']) }}
+              </div>
+            </div>
+            <div class="posn-relative">
+              <div class="form-group" [ngClass]="{'error-border': isInvalid(signUpForm.controls['password'])}">
+                <label for="password" class="icons password-icon"></label>
+                <input type="password" formControlName="password" placeholder="Password" />
+                <span class="input-focus"></span>
+              </div>
+              <div *ngIf="isInvalid(signUpForm.controls['password'])" class="error-message">
+                Please enter password
+              </div>
+            </div>
+            <div class="button-wrap mt-5">
+              <div class="button-bg"></div>
+              <button type="submit">Register</button>
+            </div>
+          </form>
+        </div>
+        <div class="signup-image col-12 col-sm-5 col-md-7 ps-2 pe-4 pt-4 d-flex flex-column align-items-center">
+          <img class="image" src="./assets/images/login.jpg" alt="sign up image">
+          <a routerLink="/login" class="text-underline pt-3">Already a member? Login</a>
+        </div>
+      </div>
+      <p class="message px-4 pt-4" [ngClass]="{'main-error-message': isError}">{{msg}}</p>
+      <app-spinner *ngIf="loading"></app-spinner>
+    </div>
+  </div>
+</div>

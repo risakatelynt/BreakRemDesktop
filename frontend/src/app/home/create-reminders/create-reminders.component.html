@@ -1,0 +1,134 @@
+<div class="gradient-bg" [ngClass]="{'d-flex justify-content-center align-items-center': !showCreateRem}"
+    *ngIf="!isAnimation">
+    <a class="go-back-link d-flex align-items-center ms-4 mt-4" (click)="goBack()" *ngIf="showCreateRem">
+        <div class="icons back-icon me-2"></div>Go back
+    </a>
+    <div class="container d-flex justify-content-center" [ngClass]="{'mt-4': showCreateRem}">
+        <div class="create-content px-5 py-4">
+            <h2 class="text-center pb-4">{{reminderType}} Reminder</h2>
+            <form [formGroup]="remindersForm">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="posn-relative">
+                            <div class="form-group"
+                                [ngClass]="{'error-border': isInvalid(remindersForm.controls['content'])}">
+                                <input class="input px-3" type="text" formControlName="content"
+                                    placeholder="Enter reminder" />
+                                <span class="input-focus"></span>
+                            </div>
+                            <div *ngIf="isInvalid(remindersForm.controls['content'])" class="error-message">
+                                Please enter content
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="posn-relative">
+                            <div class="form-group"
+                                [ngClass]="{'error-border': isInvalid(remindersForm.controls['selectedDate'])}">
+                                <input class="input px-3" type="date" formControlName="selectedDate" />
+                                <span class="input-focus"></span>
+                            </div>
+                            <div *ngIf="isInvalid(remindersForm.controls['selectedDate'])" class="error-message">
+                                Please enter Date
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="posn-relative">
+                            <div class="form-group"
+                                [ngClass]="{'error-border': isInvalid(remindersForm.controls['reminderTime'])}">
+                                <input class="input px-3" type="time" formControlName="reminderTime" />
+                                <span class="input-focus"></span>
+                            </div>
+                            <div *ngIf="isInvalid(remindersForm.controls['reminderTime'])" class="error-message">
+                                Please enter time
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="d-flex align-items-end">
+                            <div class="col-3 d-flex flex-column align-items-start">
+                                <span class="label-text pb-2">Repeat</span>
+                                <input class="bulb-checkbox" type="checkbox" formControlName="repeat">
+                            </div>
+                            <div class="col-9 ps-3 d-flex align-items-end">
+                                <div class="form-group mb-0">
+                                    <nav class="menu">
+                                        <ol>
+                                            <li class="main-menu" (click)="showMenu()">
+                                                <a>{{selectedOption}}
+                                                </a>
+                                                <ol class="sub-menu">
+                                                    <li class="menu-item" *ngFor="let type of reminderTypeObj"
+                                                        (click)="selectOption(type, $event)">
+                                                        <a>{{type}}</a>
+                                                    </li>
+                                                </ol>
+                                                <div class="icons caret-down-icon ms-3"></div>
+                                            </li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 d-flex align-items-end">
+                        <div class="form-group mb-0">
+                            <nav class="menu" (mouseleave)="onMouseLeaveNav()">
+                                <ol>
+                                    <li class="main-menu" (click)="showMenu()">
+                                        <a>{{selectedSound}}</a>
+                                        <ol class="sub-menu">
+                                            <li class="menu-item" (click)="playSound(soundOption)"
+                                                *ngFor="let soundOption of soundOptions">
+                                                <a>{{soundOption['name']}}</a>
+                                            </li>
+                                        </ol>
+                                        <div class="icons caret-down-icon ms-3"></div>
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-6 ">
+                        <h6 class="d-inline-block">Image:</h6>
+                        <h6 class="d-inline-block ps-3">{{animationName}}</h6>
+                    </div>
+                    <div class="col-6">
+                        <a (click)="showAnimations()" class="animation-link">Click here to Add Image</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 pt-4">
+                        <div class="button-wrap">
+                            <div class="button-bg"></div>
+                            <button type="submit" *ngIf="reminderType == 'Create' || reminderType == 'Default'"
+                                (click)="addReminder()">Add Reminder</button>
+                            <button type="submit" *ngIf="reminderType == 'Edit'" (click)="addReminder()">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <p class="message pt-4 mb-0" [ngClass]="{'main-error-message': isError}">{{msg}}</p>
+        </div>
+        <app-inner-spinner *ngIf="loading"></app-inner-spinner>
+    </div>
+</div>
+
+<app-animation *ngIf="isAnimation" (closeEvent)="closeAnimation($event)"
+    (animationEvent)="handleAnimation($event)"></app-animation>
+
+<div class="modal" #breakModal id="breakModal" tabindex="-1" aria-labelledby="breakModalLabel" aria-hidden="true"
+    (click)="closeBreakModal($event)">
+    <div class="modal-dialog">
+        <app-modal (closeBreakModal)="handleCloseModal($event)" (modalEvent)="handleModalData($event)"></app-modal>
+    </div>
+</div>

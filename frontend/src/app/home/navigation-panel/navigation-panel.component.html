@@ -1,0 +1,31 @@
+<div class="left-navbar">
+    <nav class="nav">
+        <div class="nav-list pt-3">
+            <a (click)="goTo($event, '/home/view')" routerLink="/home/view" class="nav-link active">
+                <span class="icons list-icon"></span>
+                <span class="nav-name">Dashboard</span></a>
+            <a (click)="goTo($event, '/home/create')" routerLink="/home/create" class="nav-link">
+                <span class="icons edit-icon"></span>
+                <span class="nav-name">Create Reminders</span></a>
+            <a (click)="goTo($event, '/home/ideas')" routerLink="/home/ideas" class="nav-link">
+                <span class="icons idea-icon"></span>
+                <span class="nav-name">Work Break Ideas</span></a>
+            <a (click)="goTo($event, '/home/themes')" routerLink="/home/themes" class="nav-link">
+                <span class="icons theme-icon"></span>
+                <span class="nav-name">Themes</span></a>
+            <a (click)="goTo($event, '/home/settings')" routerLink="/home/settings" class="nav-link">
+                <span class="icons settings-icon"></span>
+                <span class="nav-name">Settings</span></a>
+            <a (click)="goTo($event, '/home/profile')" routerLink="/home/profile" class="nav-link">
+                <span class="icons profile-icon"></span>
+                <span class="nav-name">Profile</span></a>
+            <a (click)="goTo($event, '/home/about')" routerLink="/home/about" class="nav-link">
+                <span class="icons about-icon"></span>
+                <span class="nav-name">About</span></a>
+            <a (click)="logout()" class="nav-link">
+                <span class="icons logout-icon"></span>
+                <span class="nav-name">SignOut</span></a>
+        </div>
+    </nav>
+</div>
+<app-inner-spinner *ngIf="loading"></app-inner-spinner>

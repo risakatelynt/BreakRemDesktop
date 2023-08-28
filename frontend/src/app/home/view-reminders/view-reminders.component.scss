@@ -1,0 +1,53 @@
+.rem-bg {
+    height: 100vh;
+    background: var(--background-gradient-1);
+    overflow: auto;
+}
+
+.list li {
+    list-style: none;
+    padding: 10px;
+    margin-top: 12px;
+    border-radius: 5px;
+    background: var(--list-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+    .display-text {
+        font-size: 12px;
+    }
+}
+
+.pencil-icon {
+    background: url('../../../assets/icons/pencil-solid-white.svg') no-repeat;
+}
+
+.delete-icon {
+    background: url('../../../assets/icons/trash-solid-white.svg') no-repeat;
+}
+
+.calendar-icon {
+    background: url('../../../assets/icons/calendar-solid-white.svg') no-repeat;
+    width: 14px;
+    height: 14px;
+}
+
+.repeat-icon {
+    background: url('../../../assets/icons/repeat-solid-white.svg') no-repeat;
+    width: 14px;
+    height: 14px;
+}
+
+.right-gap {
+    gap: 16px;
+}
+
+.content-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.check-box {
+    width: 20px;
+    height: 20px;
+}

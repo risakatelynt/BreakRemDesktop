@@ -1,0 +1,27 @@
+.animation-content {
+    border-radius: 20px;
+    background: var(--modal-color-2);
+    box-shadow: var(--modal-box-shadow);
+}
+
+.go-back-link {
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.back-icon {
+    background: url('../../../assets/icons/arrow-left-solid-white.svg') no-repeat;
+}
+
+button {
+    height: 40px;
+}
+
+.img-size {
+    width: 100px;
+    height: 100px;
+}
+
+.button-wrap {
+    width: 100px;
+}

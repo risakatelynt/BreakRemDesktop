@@ -1,0 +1,102 @@
+<div class="about-bg px-5 py-5">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+
+    <div *ngIf="!loading">
+        <h1 class="text-center">BreakRem</h1>
+        <h6 class="text-center">Your Ultimate Break Reminder Companion!</h6>
+
+        <div class="row mt-5">
+            <div class="col-12 d-flex align-items-center pt-5">
+                <div>
+                    <img class="size-img" [src]="images[0]" alt="balance image">
+                </div>
+                <div class="ps-4">
+                    <h6>Empowering Productivity:</h6>
+                    <p class="pt-4">
+                        Welcome to BreakRem, the ultimate solution for staying organized and on top of your daily tasks!
+                        Say
+                        goodbye to
+                        forgetting important work breaks and say hello to a more productive and healthier lifestyle.
+                        BreakRem is here to revolutionize the way you manage your time and ensure you never miss a beat.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 d-flex align-items-center pt-5">
+                <div>
+                    <h6>Personalized Work Break Reminders:</h6>
+                    <p class="pt-4">
+                        With BreakRem, you can set personalized reminders for essential work breaks such as stretches,
+                        standing up, deep
+                        breathing, closing your eyes, and staying hydrated with water breaks. Tailor your reminders to
+                        match
+                        your
+                        preferred intervals and schedule, ensuring you stay fresh and focused throughout the day.
+                    </p>
+                </div>
+                <div class="ps-4">
+                    <img class="size-img" [src]="images[1]" alt="break image">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 d-flex align-items-center pt-5">
+                <div>
+                    <img class="size-img" [src]="images[2]" alt="layout image">
+                </div>
+                <div class="ps-4">
+                    <h6>Customizable and Vibrant:</h6>
+                    <p class="pt-4">
+                        BreakRem offers a delightful user experience with visually appealing layouts and a seamless
+                        interface.
+                        Personalize your reminder list with a wide range of themes, sounds, and animations, making your
+                        reminders not
+                        just effective but also a joy to interact with.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 d-flex align-items-center pt-5">
+                <div>
+                    <h6>Unleash Your Potential with BreakRem:</h6>
+                    <p class="pt-4"> Whether you're a professional striving for peak performance or simply looking to
+                        improve your well-being during work hours, BreakRem has got your back. Embrace a more organized
+                        and
+                        healthier lifestyle with BreakRem by your side.</p>
+                </div>
+                <div class="ps-4">
+                    <img class="size-img" [src]="images[3]" alt="ontrack image">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 d-flex align-items-center pt-5">
+                <div>
+                    <img class="size-img" [src]="images[4]" alt="feedback image">
+                </div>
+                <div class="ps-4">
+                    <h6>Contact Us:</h6>
+                    <p class="pt-4"> We value your feedback and are committed to continually improving your experience
+                        with
+                        BreakRem.
+                        If you have any suggestions, feedback, or complaints, we'd love to hear from you!
+                        Please feel free to reach out to us at <strong>t.risakatelyn@gmail.com</strong> with any
+                        thoughts or ideas you
+                        may
+                        have.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-inner-spinner *ngIf="loading"></app-inner-spinner>

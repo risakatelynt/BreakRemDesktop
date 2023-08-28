@@ -1,0 +1,50 @@
+<div class="px-5 py-4" *ngIf="!showCreateRem">
+    <div class="row">
+        <div class="col-12">
+            <h5 class="my-4 poppins-italic">Take a breather and choose from our collection of curated break ideas
+                for a well-deserved pause during work-from-home sessions.</h5>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 carousel slide d-flex justify-content-center" data-ride="carousel">
+            <div class="carousel-inner create-content">
+                <div class="carousel-item" *ngFor="let rem of breakRem; let i = index"
+                    [class.active]="i === activeIndex">
+                    <div class="carousel-content">
+                        <div class="px-5 py-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h6 class="font-20 text-center ps-3 pb-4">{{rem['content']}}</h6>
+                                </div>
+                                <div class="col-12 d-flex justify-content-center">
+                                    <img [src]="rem['animationUrl']" class="break-image" alt="image" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 pt-4 mt-2 d-flex justify-content-center">
+                                    <div class="button-wrap">
+                                        <div class="button-bg"></div>
+                                        <button (click)="openCreateRem(rem)">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" (click)="prevSlide()">
+                <span class="icons left-icon ms-2"></span>
+            </a>
+
+            <a class="carousel-control-next" (click)="nextSlide()">
+                <span class="icons right-icon ms-2"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<app-inner-spinner *ngIf="loading"></app-inner-spinner>
+<app-create-reminders *ngIf="showCreateRem" [showCreateRem]="showCreateRem" [selectedReminder]="reminder"
+    [reminderType]="'Default'" (closeReminder)="handleRemEvent($event)"
+    (goBackEvent)="handleBackEvent($event)"></app-create-reminders>

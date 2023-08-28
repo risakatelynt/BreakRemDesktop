@@ -1,0 +1,65 @@
+<div class="gradient-bg px-5 py-4">
+    <h2 class="text-center display-text pb-4">Settings</h2>
+    <div class="row">
+        <div class="col-12 mb-5">
+            <div class="heading mb-3">
+                <strong>Notification Sound:</strong>
+            </div>
+            <p class="display-text mb-4">Choose your preferred default alarm sound for notifications.</p>
+            <div class="form-group mb-0">
+                <nav class="menu" (mouseleave)="onMouseLeaveNav()">
+                    <ol>
+                        <li class="main-menu" (click)="showMenu()">
+                            <a>{{selectedSound}}</a>
+                            <ol class="sub-menu">
+                                <li class="menu-item" (click)="playSound(soundOption)"
+                                    *ngFor="let soundOption of soundOptions">
+                                    <a>{{soundOption['name']}}</a>
+                                </li>
+                            </ol>
+                            <div class="icons caret-down-icon ms-3"></div>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="col-12 mb-5">
+            <div class="heading mb-3">
+                <strong>Show Notification on screen:</strong>
+            </div>
+            <p class="display-text mb-4">Enabling this option displays pop-up reminders on the screen, while disabling
+                it shows default desktop notifications.</p>
+            <div class="d-flex">
+                <span class="display-text me-2">OFF</span>
+                <input class="bulb-checkbox" type="checkbox" id="screenToggle" [(ngModel)]="isScreenOn"
+                    (change)="toggleScreen()">
+                <span class="display-text ms-2">ON</span>
+            </div>
+        </div>
+        <div class="col-12 mb-5">
+            <div class="heading mb-3">
+                <strong>Play Sound:</strong>
+            </div>
+            <p class="display-text mb-4">When set to ON, notification sounds will be played; otherwise, they will be
+                delivered silently.</p>
+            <div class="d-flex">
+                <span class="display-text me-2">OFF</span>
+                <input class="bulb-checkbox" type="checkbox" id="soundToggle" [(ngModel)]="isSoundOn"
+                    (change)="toggleSound()">
+                <span class="display-text ms-2">ON</span>
+            </div>
+        </div>
+        <div class="col-12 mb-5">
+            <div class="heading mb-3">
+                <strong>Do Not Disturb:</strong>
+            </div>
+            <p class="display-text mb-4">When set to ON, notifications will be suppressed.</p>
+            <div class="d-flex">
+                <span class="display-text me-2">OFF</span>
+                <input class="bulb-checkbox" type="checkbox" id="dndToggle" [(ngModel)]="isDndOn"
+                    (change)="toggleDoNotDisturb()">
+                <span class="display-text ms-2">ON</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+.theme-bg {
+    border-radius: 20px;
+    box-shadow: var(--modal-box-shadow);
+}
+
+.default {
+    background: -webkit-linear-gradient(45deg, #ED1E79 16%, #662D8C 51%);
+
+    .button-bg {
+        background: -webkit-linear-gradient(left, #ED1E79, #662D8C, #ED1E79, #662D8C);
+    }
+}
+
+.fake-plant {
+    background: -webkit-linear-gradient(45deg, #55efc4 16%, #000000 51%);
+}
+
+.ocean-blue {
+    background: -webkit-linear-gradient(45deg, #00C4CC 16%, #0A1A44 51%);
+}
+
+.sanguine {
+    background: -webkit-linear-gradient(45deg, #FBB03B 16%, #D4145A 51%);
+}
+
+.plum-plate {
+    background: -webkit-linear-gradient(45deg, #00dbde 16%, #A020F0 51%);
+}
+
+.yosemite {
+    background: -webkit-linear-gradient(45deg, #EA8D8D 16%, #A890FE 51%);
+}
+
+.antarctica {
+    background: -webkit-linear-gradient(45deg, #D8B5FF 16%, #1EAE98 51%);
+}
+
+.white {
+    background: -webkit-linear-gradient(45deg, #fff 16%, #fff 51%);
+}
+
+.button-wrap {
+    max-width: 120px;
+}

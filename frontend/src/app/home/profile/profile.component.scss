@@ -1,0 +1,97 @@
+.profile-bg {
+    height: 100vh;
+    background: -webkit-linear-gradient(45deg, var(--background-gradient-1) 50%, var(--background-gradient-2) 40%);
+    overflow: auto;
+}
+
+.profile-white-icon {
+    background: url('../../../assets/icons/user-solid-white.svg') no-repeat;
+}
+
+.email-white-icon {
+    background: url('../../../assets/icons/envelope-solid-white.svg') no-repeat;
+}
+
+.camera-icon {
+    background: url('../../../assets/icons/camera-solid-white.svg') no-repeat;
+    position: absolute;
+    right: 15%;
+    bottom: 0%;
+    width: 30px;
+    height: 30px;
+    z-index: 3;
+}
+
+.create-content {
+    background: var(--background-gradient-2);
+    border-radius: 20px;
+    width: 75%;
+    box-shadow: var(--modal-box-shadow);
+}
+
+.container-position {
+    position: relative;
+    width: 150px;
+    height: 165px;
+    margin: 0 auto;
+}
+
+.image-size {
+    width: 100%;
+    height: 100%;
+}
+
+.picture-container {
+    position: relative;
+    text-align: center;
+}
+
+.picture {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #999999;
+    border: 4px solid #CCCCCC;
+    color: #FFFFFF;
+    border-radius: 50%;
+    margin: 0px auto;
+    overflow: hidden;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+
+.picture:hover {
+    border-color: #2ca8ff;
+}
+
+.picture input[type="file"] {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0 !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+input {
+    color: var(--text-color);
+    font-size: 20px
+}
+
+input::placeholder {
+    color: var(--text-color);
+}
+
+.error-message {
+    top: 45px;
+}
+
+.button-wrap {
+    max-width: 150px;
+}
+
+.button-bg {
+    background: var(--background-gradient-1)
+}

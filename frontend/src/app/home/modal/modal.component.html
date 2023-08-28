@@ -1,0 +1,69 @@
+<div class="modal-content ms-4 px-4 py-4">
+    <div class="modal-header">
+        <h2 class="modal-title" id="editModalLabel">Set Time Intervals</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            (click)="closeModal()"></button>
+    </div>
+    <div class="modal-body pb-4">
+        <div class="row mt-4">
+            <div class="col-6">
+                <p class="text-black">Break Every:
+                    <span id="hour">{{selectedHours}}</span>
+                    <span> hr: </span>
+                    <span id="min">{{selectedMinutes }}</span>
+                    <span> min </span>
+                </p>
+            </div>
+            <div class="col-6">
+                <p class="text-black">Duration:
+                    <span id="durationMin">{{breakMinDuration}}</span>
+                    <span> min: </span>
+                    <span id="sec">{{breakSecDuration }}</span>
+                    <span> sec </span>
+                </p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-6">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="text-black">Hour:</div>
+                    <div class="slidecontainer ms-3">
+                        <input type="range" min="0" max="5" value="1" class="slider" id="hourRange"
+                            [(ngModel)]="selectedHours">
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="text-black">Mins:</div>
+                    <div class="slidecontainer ms-3">
+                        <input type="range" min="0" max="60" value="1" class="slider" id="minRange"
+                            [(ngModel)]="selectedMinutes">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="text-black">Mins:</div>
+                    <div class="slidecontainer ms-3">
+                        <input type="range" min="0" max="60" value="1" class="slider" id="durationMinRange"
+                            [(ngModel)]="breakMinDuration">
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="text-black">Sec:</div>
+                    <div class="slidecontainer ms-3">
+                        <input type="range" min="0" max="60" value="1" class="slider" id="durationSecRange"
+                            [(ngModel)]="breakSecDuration">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 pt-4 d-flex justify-content-center">
+                <div class="button-wrap">
+                    <div class="button-bg"></div>
+                    <button (click)="addRem()">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

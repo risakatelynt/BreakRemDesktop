@@ -1,0 +1,16 @@
+<div class="gradient-bg px-4 py-4">
+    <h2 class="text-center pb-4">Themes</h2>
+    <div class="row justify-content-center">
+        <div *ngFor="let theme of themes" class="col-3 theme-bg mx-3 my-3 px-3 py-3" [class]="theme.value">
+            <h6>{{ theme.name }}</h6>
+            <div class="row">
+                <div class="col-12 pt-4">
+                    <div class="button-wrap">
+                        <div class="button-bg"></div>
+                        <button type="submit" (click)="setTheme(theme.value)">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

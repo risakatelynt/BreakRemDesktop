@@ -1,0 +1,68 @@
+.container {
+    @media (min-width: 576px) {
+        max-width: 600px;
+    }
+}
+
+.poppins-italic {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    font-weight: bold;
+}
+
+.create-content {
+    width: 500px;
+    border-radius: 20px;
+    background: var(--background-gradient-1);
+    background: linear-gradient(45deg, var(--background-gradient-1) 16%, var(--background-gradient-2) 51%);
+    background: -webkit-linear-gradient(45deg, var(--background-gradient-1) 16%, var(--background-gradient-2) 51%);
+    box-shadow: var(--modal-box-shadow);
+}
+
+.button-wrap {
+    margin: unset;
+    min-width: 160px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.left-icon {
+    background: url('../../../assets/icons/chevron-left-solid.svg') no-repeat;
+}
+
+.right-icon {
+    background: url('../../../assets/icons/chevron-right-solid.svg') no-repeat;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--background-gradient-1);
+    color: #000;
+    text-align: center;
+    line-height: 38px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.break-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
