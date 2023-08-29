@@ -15,7 +15,7 @@ BreakRem is a dynamic desktop application designed to streamline your work-break
 - Create personalized break reminders with descriptions, images, and animations.
 - Customize reminder intervals and durations for effective work-break scheduling.
 - Benefit from a user-friendly interface that allows easy navigation and modification of reminders.
-- Choose from a collection of predefined workbreak ideas for enhanced productivity.
+- Choose from a collection of predefined work break ideas for enhanced productivity.
 - Explore the "Dashboard" to manage and organize all created break reminders efficiently.
 - Tailor application settings, screen display, sound, and notifications to personal preferences.
 - Personalize user accounts with profile pictures, usernames, and email IDs.
