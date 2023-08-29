@@ -4,9 +4,12 @@ README
 
 This repository contains break reminders application built using Angular, Electron and Django.
 
-<img width="527" alt="theme layout2" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/c8f01d26-5c05-48eb-a00f-77f6d0328253">
+<img width="590" alt="theme layout2" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/c8f01d26-5c05-48eb-a00f-77f6d0328253">
 <img width="590" alt="sound" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/ccbc5cb3-ce6f-44cc-88f8-f62c59bbfe20">
 <img width="590" alt="signup" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/6bc58549-caf9-4237-bf7e-85c7fae424e3">
+<img width="590" alt="tray notification" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/7194f7f8-cce8-43c5-ba60-7d4a575fb4bb">
+<img width="590" alt="screen notification" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/dbd9c9c4-a982-4438-a617-d45c65cb0072">
+<img width="590" alt="screen 10" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/4544a938-8144-41c1-9b53-62c17eeb9b7e">
 
 ## Features
 
