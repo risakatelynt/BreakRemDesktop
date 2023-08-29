@@ -2,14 +2,16 @@ README
 
 # BreakRem Desktop App
 
-This repository contains break reminders application built using Angular, Electron and Django.
+This repository contains break reminders desktop application built using Angular, Electron and Django.
 
-<img width="590" alt="theme layout2" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/c8f01d26-5c05-48eb-a00f-77f6d0328253">
-<img width="590" alt="sound" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/ccbc5cb3-ce6f-44cc-88f8-f62c59bbfe20">
-<img width="590" alt="signup" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/6bc58549-caf9-4237-bf7e-85c7fae424e3">
-<img width="590" alt="tray notification" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/7194f7f8-cce8-43c5-ba60-7d4a575fb4bb">
-<img width="590" alt="screen notification" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/dbd9c9c4-a982-4438-a617-d45c65cb0072">
-<img width="590" alt="screen 10" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/4544a938-8144-41c1-9b53-62c17eeb9b7e">
+<img width="590" alt="theme layout2" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/72f62240-848d-4235-ada6-4fca88f7feeb">
+<img width="590" alt="sound" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/54c70b72-c520-4cdd-ae00-db83c5931fec">
+<img width="590" alt="signup" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/1115d5e4-db84-4369-a66f-3ebe5d8af971">
+<img width="590" alt="screen notification" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/42bd241d-297a-4ae4-86c2-2947390bc219">
+<img width="590" alt="screen 12" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/10dde06c-1401-487f-973e-a4ba3c17e67f">
+<img width="590" alt="screen 10" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/e6ed44df-9bbd-4654-b93f-1e4d44d34f72">
+<img width="590" alt="notification1" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/083f451b-5f52-47c0-a689-898958925154">
+<img width="590" alt="tray notification" src="https://github.com/risakatelynt/BreakRemDesktop/assets/124533180/e6ad93a4-b27f-45ba-9f8c-2885dc4cbcd9">
 
 ## Features
 
