@@ -38,7 +38,7 @@ BreakRem is a dynamic desktop application designed to streamline your work-break
 1. Clone the repository:
 
 ```
-git clone <repository-url>
+git clone https://github.com/risakatelynt/BreakRemDesktop.git
 ```
 
 2. Install the required dependencies:
