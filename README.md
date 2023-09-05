@@ -77,3 +77,13 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
+## Deployment
+
+You can deploy the application to platforms like Firebase and Pythonanywhere for hosting the frontend and backend. Make sure to update the backend URL in the frontend to the deployed backend's URL.
+
+Deployment url: `https://breakrem-f6a3e.web.app/signup`
+
+## Acknowledgments
+
+- Special thanks to the open-source community for providing the tools and libraries used in this project.
+```
